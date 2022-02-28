@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  
+    <head>
+      <title>Paczusie - rejestracja</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/sign.css') }}">
+      <script src="/static/js/script.js" defer></script>
+    </head>
+<body>
+  <div class="navbar">
+    <a href="/">Home</a> 
+      <a href="/sender/sign-up">Sign-in</a> 
+  </div>
+
+  <div class="container">
+    <div class="header">
+  <h2> Załóż nowe konto </h2>
+</div>  
+  <form action="https://infinite-hamlet-29399.herokuapp.com/sender/register" method="POST" id="formularz" enctype="multipart/form-data">
+    <ul>
+      <div class="pole">
+      <label for="firstname">Imię</label>
+      <input type="text" name="firstname"  id="firstname" required > 
+    </div>
+      <label for="firstname">Nazwisko</label>
+      <div class="pole">
+      <input type="text" name="lastname"  id="lastname" required>
+    </div>
+    <label for="firstname">Login</label>
+    <div class="pole">
+       <input type="text" name="login"  id="login" required>
+    </div>
+    <label for="firstname">Płeć</label>
+      <div class="pole">
+       <input type="text" name="sex"  id="sex" required>
+    </div>
+    <label for="firstname">Hasło</label>
+      <div class="pole">
+       <input type="password" name="password" id="password" required>
+    </div>
+    <label for="firstname">Powtórz hasło</label>
+      <div class="pole">
+       <input type="password" name="password2"id="password2" required>
+    </div>
+    <label for="firstname">Zdjęcie</label>
+      <div class="pole">
+       <input type="file" name="photo" accept="image/png, image/jpg">
+    </div>  
+      <div class="pole">
+      <input type="submit" value="Submit" id="button">
+    </div>
+    </ul>
+  </form>
+</div>
+</body>
+</html>

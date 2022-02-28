@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paczuczusie</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">   
+      </head>
+     
+<body>
+  <div class="navbar">
+    <a href="/">Home</a> 
+    <a href="/sender/register">Register</a> 
+    <a href="/sender/login">Login</a> 
+    <a href="/sender/logout">Logout</a> 
+    <a href="/sender/dashboard">Dashboard</a> 
+</div>
+</div class="form">
+<form action="/sender/login" method="POST" enctype=multipart/form-data>
+  <div>
+    <label for="username">Login</label>
+    <input type="text" name="username"/>
+   </div>
+   <div>
+    <label for="password">Hasło</label>
+    <input type="text" name="password"/>
+   </div>
+   <input type="submit" name="submit"  value="Zaloguj się"/>
+</form>
+</div>
+{% with messages = get_flashed_messages() %}
+ {% if messages %}
+ <ul class=flashes>
+ {% for message in messages %}
+ <li>{{ message }}</li>
+ {% endfor %}
+ </ul>
+ {% endif %}
+{% endwith %}
+</body>
+</html>
+    

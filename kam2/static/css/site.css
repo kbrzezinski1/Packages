@@ -1,0 +1,30 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+    padding-top: 50px; 
+  }
+
+
+  .navbar {
+    overflow: hidden;
+    background-color: rgb(23, 45, 143);
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+  }
+
+  .navbar a {
+    float: left;
+    font-size: large;
+    font: bold;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: solid;
+  }
+  
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }

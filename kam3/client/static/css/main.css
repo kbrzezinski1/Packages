@@ -1,0 +1,33 @@
+
+  .main {
+    margin-top: 50px;
+  }
+
+  .mid{ 
+    background: rgb(185, 230, 245);
+    margin: 0 auto; 
+    width: 50%; 
+    
+  }
+  .midnice{ 
+    background: rgb(185, 230, 245);
+    margin: 0 auto; 
+    width: 50%; 
+  }
+
+  .middle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: auto;
+    margin-top:50px;
+  }
+
+  .right {
+    position: absolute;
+    right: 0px;
+    width: 100px;
+  }
+  
+  

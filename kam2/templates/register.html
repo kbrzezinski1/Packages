@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paczuczusie</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">   
+      </head>
+     
+<body>
+  <div class="navbar">
+    <a href="/">Home</a> 
+    <a href="/sender/register">Register</a> 
+    <a href="/sender/login">Login</a> 
+    <a href="/sender/logout">Logout</a> 
+    <a href="/sender/dashboard">Dashboard</a> 
+</div>
+<div class="form">
+<form action="/sender/register" method="POST" enctype=multipart/form-data>
+  <div>
+   <label for="firstname">Imię</label>
+   <input type="text" name="firstname"/>
+  </div>
+  <div>
+    <label for="lastname">Nazwisko</label>
+    <input type="text" name="lastname"/>
+   </div>
+   <div>
+    <label for="login">Login</label>
+    <input type="text" name="login"/>
+   </div>
+   <div>
+    <label for="e-mail">E-mail</label>
+    <input type="text" name="e-mail"/>
+   </div>
+   <div>
+    <label for="password">Hasło</label>
+    <input type="password" name="password"/>
+   </div>
+   <div>
+    <label for="password2">Powtórz hasło</label>
+    <input type="password" name="password2"/>
+   </div>
+   <div>
+    <label for="adress">Adres</label>
+    <input type="text" name="adress"/>
+   </div>
+   <input type="submit" name="submit" value="Zarejestruj się"/>
+</form>
+</div>
+{% with messages = get_flashed_messages() %}
+ {% if messages %}
+ <ul class=flashes>
+ {% for message in messages %}
+ <li>{{ message }}</li>
+ {% endfor %}
+ </ul>
+ {% endif %}
+{% endwith %}
+</body>
+</html>
